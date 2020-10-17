@@ -23,16 +23,19 @@
 	align-items: $align;
 }
 
-$accent-color: #e8833a;
+$orange: #e8833a;
+$darkgrey: #3e3e3e;
 
 html {
 	font-family: 'Roboto', sans-serif;
-	color: #3e3e3e;
+	color: $darkgrey;
 }
 
 h1 {font-size: 3.1rem;}
 h2 {font-size: 2.3rem;}
 h3 {font-size: 2rem;}
+
+p {font-size: 2rem; line-height: 2.5rem;}
 
 button {
 	font: inherit;
@@ -42,7 +45,7 @@ button {
 	padding: 1rem 2rem;
 	border-radius: .3rem;
 	color: white;
-	background-color: $accent-color;
+	background-color: $orange;
 	margin: 1rem 0;
 }
 
@@ -63,8 +66,8 @@ button {
 
 .login-button {
 	background-color: white;
-	color: $accent-color;
-	border: solid $accent-color .1rem;
+	color: $orange;
+	border: solid $orange .1rem;
 	padding: .9rem 2rem;
 	
 }
@@ -85,9 +88,100 @@ header {
 }
 
 figure {
-	@include flex(center, center);
+	@include flex(space-between, center);
+	width: 70%;
+	margin: 1rem auto;
+	
+	div {
+		@include flex(center, center);
+		font-size: 2rem;
+		font-weight: 600;
+		width: 8rem;
+		height: 8rem;
+		border: solid $orange .2rem;
+		border-radius: 5rem;
+	}
 }
 
+#main-blurb {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	padding: .1rem 1rem;
+	color: $darkgrey;
+	background-color: lightgrey;
+}
+
+#how-it-works {
+	@include flex(center, center);
+	flex-direction: column;
+	width: 90%;
+	margin: 2rem auto;
+	text-align: center;
+	padding: .1rem 3rem;
+	border: dashed lightgrey .4rem;
+}
+
+#fake-post {
+	border: solid lightgrey .2rem;
+	padding: 1rem 0 .5rem 1rem;
+	width: 258px;
+	
+	p {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		text-align: left;
+		margin: 0rem;
+	}
+	
+	#container {
+		display: flex;
+		flex: row nowrap;
+		
+		#fake-text-cont {
+			width: 90%;
+			.fake-text1 {
+			height: 1rem;
+			width: 70%;
+			background-color: lightgrey;
+			margin-top: 1rem;
+			}
+
+			.fake-text2 {
+			height: 1rem;
+			width: 50%;
+			background-color: lightgrey;
+			margin-top: .3rem;
+			}
+
+			.fake-text3 {
+			height: 1rem;
+			width: 60%;
+			background-color: lightgrey;
+			margin-top: .3rem;
+			margin-bottom: 2rem;
+			}
+		}
+
+		#voter {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-content: flex-end;
+			text-align: right;
+			p {
+				color: $orange;
+				font-weight: 600;
+				margin: .1rem 0;
+			}
+		}
+
+		.arrow {
+			width: 1.7rem;
+		}
+	}
+
+}
 
 
 
