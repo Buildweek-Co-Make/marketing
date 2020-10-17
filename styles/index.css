@@ -356,39 +356,75 @@ ol, ul {
   list-style: none; }
 
 /*END RESET*/
-/* line 26, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 28, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 html {
   font-family: 'Roboto', sans-serif;
   color: #3e3e3e; }
 
-/* line 31, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 33, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 h1 {
   font-size: 3.1rem; }
 
-/* line 32, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 34, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 h2 {
   font-size: 2.3rem; }
 
-/* line 33, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 35, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 h3 {
   font-size: 2rem; }
 
-/* line 35, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 37, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+button {
+  font: inherit;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  color: white;
+  background-color: #e8833a;
+  margin: 1rem 0; }
+
+/* line 49, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+#desktop-results-button {
+  display: none; }
+  @media (min-width: 600px) {
+    /* line 49, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    #desktop-results-button {
+      display: inline-block;
+      margin-right: 1rem; } }
+
+/* line 57, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+#mobile-results-button {
+  display: none; }
+  @media (max-width: 599px) {
+    /* line 57, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    #mobile-results-button {
+      display: block; } }
+
+/* line 64, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+.login-button {
+  background-color: white;
+  color: #e8833a;
+  border: solid #e8833a 0.1rem;
+  padding: .9rem 2rem; }
+
+/* line 72, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 header {
   color: white;
-  padding: 0 2.3rem;
+  padding: 0 2.3rem 2.3rem 2.3rem;
   background-image: url(/assets/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay; }
-  /* line 47, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  /* line 80, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 2rem 0; }
+    padding: 1rem 0; }
 
-/* line 54, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 87, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 figure {
   display: flex;
   justify-content: center;

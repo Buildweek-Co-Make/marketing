@@ -23,6 +23,8 @@
 	align-items: $align;
 }
 
+$accent-color: #e8833a;
+
 html {
 	font-family: 'Roboto', sans-serif;
 	color: #3e3e3e;
@@ -32,25 +34,75 @@ h1 {font-size: 3.1rem;}
 h2 {font-size: 2.3rem;}
 h3 {font-size: 2rem;}
 
+button {
+	font: inherit;
+	border: none;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding: 1rem 2rem;
+	border-radius: .3rem;
+	color: white;
+	background-color: $accent-color;
+	margin: 1rem 0;
+}
+
+#desktop-results-button {
+	display: none;
+	@include for-tablet-portrait-up {
+		display: inline-block;
+		margin-right: 1rem;
+	}
+}
+
+#mobile-results-button {
+	display: none;
+	@include for-phone-only {
+		display: block;
+	}
+}
+
+.login-button {
+	background-color: white;
+	color: $accent-color;
+	border: solid $accent-color .1rem;
+	padding: .9rem 2rem;
+	
+}
+
 header {
 	color: white;
-	padding: 0 2.3rem;
+	padding: 0 2.3rem 2.3rem 2.3rem;
 	background-image: url(/assets/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,.9));
 	background-size: cover;
 	background-position: center;
 	background-blend-mode: overlay;
 	
-	h1 {
-		
-	}
-	
 	nav {
 		@include flex(flex-end, center);
-		padding: 2rem 0;
-		
+		padding: 1rem 0;
 	}
+	
 }
 
 figure {
 	@include flex(center, center);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
