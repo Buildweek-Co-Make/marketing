@@ -118,8 +118,12 @@ figure {
 	width: 90%;
 	margin: 2rem auto;
 	text-align: center;
-	padding: .1rem 3rem;
+	padding: 0 5rem;
 	border: dashed lightgrey .4rem;
+	
+	h3 {
+		margin: 3rem 0;
+	}
 }
 
 #fake-post {
@@ -183,9 +187,43 @@ figure {
 
 }
 
+#vote-box {
+	@extend #fake-post;
+	width: 258px;
+	height: 115px;
+	padding: 1rem;
+	@include flex(space-around, center);
+	
+	div {
+		
+		img {
+			height: 7rem;
+		}
+		
+	}
+}
 
-
-
+footer {
+	@include flex(center, center);
+	flex-direction: column;
+	nav {
+		button {
+			margin: 0 1rem;
+		}
+	}
+	
+	h2 {
+		margin: 0;
+	}
+	
+	p {
+		font-size: 1rem;
+		color: lightgrey;
+		a {
+			color: lightgrey;
+		}
+	}
+}
 
 
 
