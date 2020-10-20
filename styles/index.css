@@ -389,32 +389,36 @@ button {
   color: white;
   background-color: #e8833a;
   margin: 1rem 0; }
+  @media (min-width: 900px) {
+    /* line 40, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    button {
+      font-size: 1.8rem; } }
 
-/* line 52, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 56, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #desktop-results-button {
   display: none; }
   @media (min-width: 600px) {
-    /* line 52, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 56, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     #desktop-results-button {
       display: inline-block;
       margin-right: 1rem; } }
 
-/* line 60, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 64, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #mobile-results-button {
   display: none; }
   @media (max-width: 599px) {
-    /* line 60, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 64, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     #mobile-results-button {
       display: block; } }
 
-/* line 67, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 71, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 .login-button {
   background-color: white;
   color: #e8833a;
   border: solid #e8833a 0.1rem;
   padding: .9rem 2rem; }
 
-/* line 75, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 79, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 header {
   color: white;
   padding: 0 2.3rem 2.3rem 2.3rem;
@@ -422,21 +426,50 @@ header {
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay; }
-  /* line 83, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  @media (min-width: 600px) {
+    /* line 79, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    header {
+      padding: 0 10vw 10vw 10vw; } }
+  /* line 91, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0; }
+  @media (min-width: 600px) {
+    /* line 96, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    header h1 {
+      font-size: 5vw; } }
+  @media (min-width: 900px) {
+    /* line 96, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    header h1 {
+      font-size: 5rem; } }
+  @media (min-width: 600px) {
+    /* line 106, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    header h2 {
+      font-size: 3.5vw; } }
+  @media (min-width: 900px) {
+    /* line 106, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    header h2 {
+      font-size: 3rem; } }
 
-/* line 90, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 118, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 figure {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  margin: 1rem auto; }
-  /* line 95, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  margin: 2rem auto; }
+  @media (min-width: 600px) {
+    /* line 118, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    figure {
+      width: 60%; } }
+  @media (min-width: 900px) {
+    /* line 118, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    figure {
+      width: 45%;
+      margin: 3rem auto; } }
+  /* line 132, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   figure div {
     display: flex;
     justify-content: center;
@@ -447,8 +480,14 @@ figure {
     height: 8rem;
     border: solid #e8833a 0.2rem;
     border-radius: 5rem; }
+    @media (min-width: 600px) {
+      /* line 132, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+      figure div {
+        font-size: 2.5rem;
+        width: 10rem;
+        height: 10rem; } }
 
-/* line 106, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 149, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #main-blurb {
   width: 90%;
   margin: auto;
@@ -456,8 +495,12 @@ figure {
   padding: .1rem 1rem;
   color: #3e3e3e;
   background-color: lightgrey; }
+  @media (min-width: 600px) {
+    /* line 149, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    #main-blurb {
+      width: 70%; } }
 
-/* line 115, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 162, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #how-it-works {
   display: flex;
   justify-content: center;
@@ -468,64 +511,72 @@ figure {
   text-align: center;
   padding: 0 5rem;
   border: dashed lightgrey .4rem; }
-  /* line 124, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  @media (min-width: 600px) {
+    /* line 162, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    #how-it-works {
+      width: 70%; } }
+  @media (min-width: 900px) {
+    /* line 162, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    #how-it-works {
+      margin: 4rem auto; } }
+  /* line 179, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   #how-it-works h3 {
     margin: 3rem 0; }
 
-/* line 129, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 184, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #fake-post, #vote-box {
   border: solid lightgrey .2rem;
   padding: 1rem 0 .5rem 1rem;
   width: 258px; }
-  /* line 134, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  /* line 189, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   #fake-post p, #vote-box p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: left;
     margin: 0rem; }
-  /* line 141, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  /* line 196, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   #fake-post #container, #vote-box #container {
     display: flex;
     flex: row nowrap; }
-    /* line 145, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 200, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     #fake-post #container #fake-text-cont, #vote-box #container #fake-text-cont {
       width: 90%; }
-      /* line 147, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+      /* line 202, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
       #fake-post #container #fake-text-cont .fake-text1, #vote-box #container #fake-text-cont .fake-text1 {
         height: 1rem;
         width: 70%;
         background-color: lightgrey;
         margin-top: 1rem; }
-      /* line 154, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+      /* line 209, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
       #fake-post #container #fake-text-cont .fake-text2, #vote-box #container #fake-text-cont .fake-text2 {
         height: 1rem;
         width: 50%;
         background-color: lightgrey;
         margin-top: .3rem; }
-      /* line 161, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+      /* line 216, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
       #fake-post #container #fake-text-cont .fake-text3, #vote-box #container #fake-text-cont .fake-text3 {
         height: 1rem;
         width: 60%;
         background-color: lightgrey;
         margin-top: .3rem;
         margin-bottom: 2rem; }
-    /* line 170, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 225, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     #fake-post #container #voter, #vote-box #container #voter {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-content: flex-end;
       text-align: right; }
-      /* line 176, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+      /* line 231, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
       #fake-post #container #voter p, #vote-box #container #voter p {
         color: #e8833a;
         font-weight: 600;
         margin: .1rem 0; }
-    /* line 183, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 238, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     #fake-post #container .arrow, #vote-box #container .arrow {
       width: 1.7rem; }
 
-/* line 190, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 245, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 #vote-box {
   width: 258px;
   height: 115px;
@@ -533,27 +584,32 @@ figure {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  /* line 199, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  /* line 254, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   #vote-box div img {
     height: 7rem; }
 
-/* line 206, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+/* line 261, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; }
-  /* line 210, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  /* line 265, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   footer nav button {
-    margin: 0 1rem; }
-  /* line 215, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    margin: 1rem 1rem; }
+  /* line 269, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+  footer nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  /* line 274, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   footer h2 {
-    margin: 0; }
-  /* line 219, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    margin: 1rem 0 0 0; }
+  /* line 278, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
   footer p {
     font-size: 1rem;
     color: lightgrey; }
-    /* line 222, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
+    /* line 281, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/index.scss */
     footer p a {
       color: lightgrey; }
 

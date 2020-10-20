@@ -47,6 +47,10 @@ button {
 	color: white;
 	background-color: $orange;
 	margin: 1rem 0;
+	
+	@include for-tablet-landscape-up {
+			font-size: 1.8rem;
+		}
 }
 
 #desktop-results-button {
@@ -80,9 +84,33 @@ header {
 	background-position: center;
 	background-blend-mode: overlay;
 	
+	@include for-tablet-portrait-up {
+		padding: 0 10vw 10vw 10vw;
+	}
+	
 	nav {
 		@include flex(flex-end, center);
 		padding: 1rem 0;
+	}
+	
+	h1 {
+		@include for-tablet-portrait-up {
+			font-size: 5vw;
+		}
+		
+		@include for-tablet-landscape-up {
+			font-size: 5rem;
+		}
+	}
+	
+	h2 {
+		@include for-tablet-portrait-up {
+			font-size: 3.5vw;
+		}
+		
+		@include for-tablet-landscape-up {
+			font-size: 3rem;
+		}
 	}
 	
 }
@@ -90,7 +118,16 @@ header {
 figure {
 	@include flex(space-between, center);
 	width: 70%;
-	margin: 1rem auto;
+	margin: 2rem auto;
+	
+	@include for-tablet-portrait-up {
+		width: 60%;
+	}
+	
+	@include for-tablet-landscape-up {
+		width: 45%;
+		margin: 3rem auto;
+	}
 	
 	div {
 		@include flex(center, center);
@@ -100,6 +137,12 @@ figure {
 		height: 8rem;
 		border: solid $orange .2rem;
 		border-radius: 5rem;
+		
+		@include for-tablet-portrait-up {
+			font-size: 2.5rem;
+			width: 10rem;
+			height: 10rem;
+		}
 	}
 }
 
@@ -110,6 +153,10 @@ figure {
 	padding: .1rem 1rem;
 	color: $darkgrey;
 	background-color: lightgrey;
+	
+	@include for-tablet-portrait-up {
+		width: 70%;
+	}
 }
 
 #how-it-works {
@@ -120,6 +167,14 @@ figure {
 	text-align: center;
 	padding: 0 5rem;
 	border: dashed lightgrey .4rem;
+	
+		@include for-tablet-portrait-up {
+		width: 70%;
+	}
+	
+	@include for-tablet-landscape-up {
+		margin: 4rem auto;
+	}
 	
 	h3 {
 		margin: 3rem 0;
@@ -208,12 +263,16 @@ footer {
 	flex-direction: column;
 	nav {
 		button {
-			margin: 0 1rem;
+			margin: 1rem 1rem;
+		}
+		
+		div {
+			@include flex(center, center);
 		}
 	}
 	
 	h2 {
-		margin: 0;
+		margin: 1rem 0 0 0;
 	}
 	
 	p {
