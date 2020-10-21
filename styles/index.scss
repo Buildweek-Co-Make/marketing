@@ -53,6 +53,14 @@ button {
 		}
 }
 
+.login-button {
+	background-color: white;
+	color: $orange;
+	border: solid $orange .1rem;
+	padding: .9rem 2rem;
+	
+}
+
 #desktop-results-button {
 	display: none;
 	@include for-tablet-portrait-up {
@@ -68,14 +76,6 @@ button {
 	}
 }
 
-.login-button {
-	background-color: white;
-	color: $orange;
-	border: solid $orange .1rem;
-	padding: .9rem 2rem;
-	
-}
-
 header {
 	color: white;
 	padding: 0 2.3rem 2.3rem 2.3rem;
@@ -84,50 +84,56 @@ header {
 	background-position: center;
 	background-blend-mode: overlay;
 	
-	@include for-tablet-portrait-up {
-		padding: 0 10vw 10vw 10vw;
-	}
-	
 	nav {
 		@include flex(flex-end, center);
 		padding: 1rem 0;
 	}
 	
-	h1 {
-		@include for-tablet-portrait-up {
+	#scroll-indicator {
+		display: none
+	}
+	
+	@include for-tablet-portrait-up {
+		padding: 0 10vw 10vw 10vw;
+		h1 {
 			font-size: 5vw;
 		}
-		
-		@include for-tablet-landscape-up {
-			font-size: 5rem;
+		h2 {
+			font-size: 3.5vw;
 		}
 	}
 	
-	h2 {
-		@include for-tablet-portrait-up {
-			font-size: 3.5vw;
+	@include for-tablet-landscape-up {
+		h1 {
+			font-size: 5.5rem;
 		}
-		
-		@include for-tablet-landscape-up {
+		h2 {
 			font-size: 3rem;
 		}
 	}
 	
+	@include for-desktop-up {
+		height: 100vh;
+		padding: 0 20vw 0 20vw;
+		
+		h1 {
+			margin-top: 25vh;
+		}
+		
+		#scroll-indicator {
+			@include flex(center, flex-end);
+			height: 37vh;
+		}
+		img {
+			height: 12rem;
+		}
+	}
 }
 
 figure {
 	@include flex(space-between, center);
 	width: 70%;
 	margin: 2rem auto;
-	
-	@include for-tablet-portrait-up {
-		width: 60%;
-	}
-	
-	@include for-tablet-landscape-up {
-		width: 45%;
-		margin: 3rem auto;
-	}
 	
 	div {
 		@include flex(center, center);
@@ -137,12 +143,21 @@ figure {
 		height: 8rem;
 		border: solid $orange .2rem;
 		border-radius: 5rem;
+	}
+	
+	@include for-tablet-portrait-up {
+		width: 60%;
 		
-		@include for-tablet-portrait-up {
+		div {
 			font-size: 2.5rem;
 			width: 10rem;
 			height: 10rem;
 		}
+	}
+	
+	@include for-tablet-landscape-up {
+		width: 45%;
+		margin: 3rem auto;
 	}
 }
 
@@ -168,23 +183,27 @@ figure {
 	padding: 0 5rem;
 	border: dashed lightgrey .4rem;
 	
-		@include for-tablet-portrait-up {
+	h3 {
+		margin: 3rem 0;
+	}
+	
+	@include for-tablet-portrait-up {
 		width: 70%;
 	}
 	
 	@include for-tablet-landscape-up {
 		margin: 4rem auto;
-	}
-	
-	h3 {
-		margin: 3rem 0;
+		
+		h3 {
+			font-size: 2.5rem;
+		}
 	}
 }
 
 #fake-post {
 	border: solid lightgrey .2rem;
 	padding: 1rem 0 .5rem 1rem;
-	width: 258px;
+	width: 25.8rem;
 	
 	p {
 		font-size: 1.5rem;
@@ -199,35 +218,32 @@ figure {
 		
 		#fake-text-cont {
 			width: 90%;
-			.fake-text1 {
+			
+			.fake-text {
 			height: 1rem;
-			width: 70%;
-			background-color: lightgrey;
-			margin-top: 1rem;
-			}
-
-			.fake-text2 {
-			height: 1rem;
-			width: 50%;
 			background-color: lightgrey;
 			margin-top: .3rem;
+			
 			}
-
-			.fake-text3 {
-			height: 1rem;
-			width: 60%;
-			background-color: lightgrey;
-			margin-top: .3rem;
-			margin-bottom: 2rem;
+			
+			#ft1 {
+				width: 70%;
+				margin-top: 1rem;
+			}
+			#ft2 {
+				width: 50%;
+				
+			}
+			#ft3 {
+				width: 60%;
+				margin-bottom: 2rem;
 			}
 		}
 
 		#voter {
-			display: flex;
+			@include flex(flex-end, flex-end);
 			flex-direction: column;
-			justify-content: flex-end;
-			align-content: flex-end;
-			text-align: right;
+
 			p {
 				color: $orange;
 				font-weight: 600;
@@ -244,13 +260,11 @@ figure {
 
 #vote-box {
 	@extend #fake-post;
-	width: 258px;
-	height: 115px;
+	height: 11.5rem;
 	padding: 1rem;
 	@include flex(space-around, center);
 	
 	div {
-		
 		img {
 			height: 7rem;
 		}
@@ -261,6 +275,7 @@ figure {
 footer {
 	@include flex(center, center);
 	flex-direction: column;
+	
 	nav {
 		button {
 			margin: 1rem 1rem;
