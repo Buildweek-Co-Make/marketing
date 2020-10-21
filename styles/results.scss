@@ -46,7 +46,7 @@ button {
 	border-radius: .3rem;
 	color: white;
 	background-color: $orange;
-	margin: 1rem 0;
+	margin: .5rem 0;
 	cursor: pointer;
 	
 	@include for-tablet-landscape-up {
@@ -62,21 +62,6 @@ button {
 	
 }
 
-#desktop-results-button {
-	display: none;
-	@include for-tablet-portrait-up {
-		display: inline-block;
-		margin-right: 1rem;
-	}
-}
-
-#mobile-results-button {
-	display: none;
-	@include for-phone-only {
-		display: block;
-	}
-}
-
 header {
 	color: white;
 	padding: 0 2.3rem 2.3rem 2.3rem;
@@ -86,7 +71,8 @@ header {
 	background-blend-mode: overlay;
 	
 	nav {
-		@include flex(flex-end, center);
+		@include flex(center, flex-end);
+		flex-direction: column;
 		padding: 1rem 0;
 	}
 	
@@ -131,80 +117,18 @@ header {
 	}
 }
 
-figure {
-	@include flex(space-between, center);
-	width: 70%;
-	margin: 2rem auto;
-	
-	div {
-		@include flex(center, center);
-		font-size: 2rem;
-		font-weight: 600;
-		width: 8rem;
-		height: 8rem;
-		border: solid $orange .2rem;
-		border-radius: 5rem;
-	}
-	
-	@include for-tablet-portrait-up {
-		width: 60%;
-		
-		div {
-			font-size: 2.5rem;
-			width: 10rem;
-			height: 10rem;
-		}
-	}
-	
-	@include for-tablet-landscape-up {
-		width: 45%;
-		margin: 3rem auto;
-	}
-}
-
-#main-blurb {
-	width: 90%;
-	margin: auto;
-	text-align: center;
-	padding: .1rem 1rem;
-	color: $darkgrey;
-	background-color: lightgrey;
-	
-	@include for-tablet-portrait-up {
-		width: 70%;
-	}
-}
-
-#how-it-works {
+main {
 	@include flex(center, center);
-	flex-direction: column;
-	width: 90%;
-	margin: 2rem auto;
-	text-align: center;
-	padding: 0 5rem;
-	border: dashed lightgrey .4rem;
-	
-	h3 {
-		margin: 3rem 0;
-	}
-	
-	@include for-tablet-portrait-up {
-		width: 70%;
-	}
-	
-	@include for-tablet-landscape-up {
-		margin: 4rem auto;
-		
-		h3 {
-			font-size: 2.5rem;
-		}
-	}
+	flex-flow: row wrap;
+	margin: 2rem;
 }
 
-#fake-post {
+.fake-post {
 	border: solid lightgrey .2rem;
 	padding: 1rem 0 .5rem 1rem;
 	width: 25.8rem;
+	margin: 2rem;
+	box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.1),-4px -4px 8px 0px #fff;
 	
 	p {
 		font-size: 1.5rem;
@@ -259,29 +183,11 @@ figure {
 
 }
 
-#vote-box {
-	@extend #fake-post;
-	height: 11.5rem;
-	padding: 1rem;
-	@include flex(space-around, center);
-	
-	div {
-		img {
-			height: 7rem;
-		}
-		
-	}
-}
-
 footer {
 	@include flex(center, center);
 	flex-direction: column;
 	
 	nav {
-		button {
-			margin: 1rem 1rem;
-		}
-		
 		div {
 			@include flex(center, center);
 		}
