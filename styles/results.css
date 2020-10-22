@@ -462,78 +462,104 @@ main {
   align-items: center;
   flex-flow: row wrap;
   margin: 2rem; }
+  @media (min-width: 1200px) {
+    /* line 120, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    main {
+      width: 80%;
+      margin: auto; } }
 
-/* line 126, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+/* line 131, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
 .fake-post {
   border: solid lightgrey .2rem;
   padding: 1rem 0 .5rem 1rem;
   width: 25.8rem;
   margin: 2rem;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1), -4px -4px 8px 0px #fff; }
-  /* line 133, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+  /* line 138, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
   .fake-post p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: left;
     margin: 0rem; }
-  /* line 140, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+  /* line 145, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
   .fake-post #container {
     display: flex;
     flex: row nowrap; }
-    /* line 144, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    /* line 149, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
     .fake-post #container #fake-text-cont {
       width: 90%; }
-      /* line 147, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      /* line 152, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
       .fake-post #container #fake-text-cont .fake-text {
         height: 1rem;
         background-color: lightgrey;
         margin-top: .3rem; }
-      /* line 154, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      /* line 159, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
       .fake-post #container #fake-text-cont #ft1 {
         width: 70%;
         margin-top: 1rem; }
-      /* line 158, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      /* line 163, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
       .fake-post #container #fake-text-cont #ft2 {
         width: 50%; }
-      /* line 162, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      /* line 167, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
       .fake-post #container #fake-text-cont #ft3 {
         width: 60%;
         margin-bottom: 2rem; }
-    /* line 168, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    /* line 173, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
     .fake-post #container #voter {
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
       flex-direction: column; }
-      /* line 172, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      /* line 177, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
       .fake-post #container #voter p {
         color: #e8833a;
         font-weight: 600;
         margin: .1rem 0; }
-    /* line 179, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    /* line 184, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
     .fake-post #container .arrow {
       width: 1.7rem; }
+  @media (min-width: 1200px) {
+    /* line 131, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    .fake-post {
+      width: 32rem; }
+      /* line 192, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      .fake-post p {
+        font-size: 2rem;
+        line-height: 2rem; } }
 
-/* line 186, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+/* line 200, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+article {
+  text-align: center; }
+
+/* line 204, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; }
-  /* line 191, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
-  footer nav div {
+  /* line 208, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+  footer nav {
     display: flex;
     justify-content: center;
-    align-items: center; }
-  /* line 196, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    align-items: center;
+    flex-direction: column; }
+  /* line 213, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
   footer h2 {
     margin: 1rem 0 0 0; }
-  /* line 200, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+  /* line 217, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
   footer p {
     font-size: 1rem;
     color: lightgrey; }
-    /* line 203, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    /* line 220, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
     footer p a {
       color: lightgrey; }
+  @media (min-width: 600px) {
+    /* line 226, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+    footer nav {
+      flex-direction: row; }
+      /* line 229, /Users/home/Documents/Lambda WebDev/Unit 1/Build-Week-1/marketing/styles/results.scss */
+      footer nav button {
+        margin-left: 1rem;
+        margin-right: 1rem; } }
 
 /*# sourceMappingURL=results.css.map */

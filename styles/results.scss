@@ -121,6 +121,11 @@ main {
 	@include flex(center, center);
 	flex-flow: row wrap;
 	margin: 2rem;
+	
+	@include for-desktop-up {
+		width: 80%;
+		margin: auto;
+	}
 }
 
 .fake-post {
@@ -180,7 +185,20 @@ main {
 			width: 1.7rem;
 		}
 	}
+	
+	@include for-desktop-up {
+		width: 32rem;
+		
+		p {
+			font-size: 2rem;
+			line-height: 2rem;
+		}
+	}
 
+}
+
+article {
+	text-align: center;
 }
 
 footer {
@@ -188,9 +206,8 @@ footer {
 	flex-direction: column;
 	
 	nav {
-		div {
-			@include flex(center, center);
-		}
+		@include flex(center, center);
+		flex-direction: column
 	}
 	
 	h2 {
@@ -202,6 +219,17 @@ footer {
 		color: lightgrey;
 		a {
 			color: lightgrey;
+		}
+	}
+	
+	@include for-tablet-portrait-up {
+		nav {
+			flex-direction: row;
+			
+			button {
+				margin-left: 1rem;
+				margin-right: 1rem;
+			}
 		}
 	}
 }
