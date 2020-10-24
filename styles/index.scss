@@ -1,6 +1,7 @@
-@import 'normalize';
-@import 'reset';
+@import 'normalize'; //adds 'normalize'
+@import 'reset'; //adds select resets
 
+// Set media query breakpoints for quick access
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
@@ -17,18 +18,21 @@
   @media (min-width: 1800px) { @content; }
 }
 
+// Quick access to flex properties
 @mixin flex($justify, $align) {
 	display: flex;
 	justify-content: $justify;
 	align-items: $align;
 }
 
+// Key colors for use below
 $orange: #e8833a;
 $darkgrey: #3e3e3e;
 
 html {
 	font-family: 'Roboto', sans-serif;
-	color: $darkgrey;
+	color: $darkgrey; // Set default font color to value stored above
+	scroll-behavior: smooth; //smooth scroll when clicking the scroll indicator
 }
 
 h1 {font-size: 3.1rem;}
@@ -36,7 +40,7 @@ h2 {font-size: 2.3rem;}
 h3 {font-size: 2rem;}
 
 p {font-size: 2rem; line-height: 2.5rem;}
-//TEST COMMENTs
+
 button {
 	font: inherit;
 	border: none;
@@ -50,30 +54,31 @@ button {
 	cursor: pointer;
 	
 	@include for-tablet-landscape-up {
-			font-size: 1.8rem;
+			font-size: 1.8rem; // Make button text bigger for larger screens
 		}
 }
 
 .login-button {
 	background-color: white;
-	color: $orange;
+	color: $orange; // Uses color stored in variable above
 	border: solid $orange .1rem;
 	padding: .9rem 2rem;
-	
 }
 
+// Desktop and mobile results buttons are two separate buttons
+// with one or the other hidden depending on viewport width
 #desktop-results-button {
-	display: none;
+	display: none; //hide by defulat
 	@include for-tablet-portrait-up {
-		display: inline-block;
+		display: inline-block; //diplay on >= 600px width
 		margin-right: 1rem;
 	}
 }
 
 #mobile-results-button {
-	display: none;
+	display: none; //hide by defualt
 	@include for-phone-only {
-		display: block;
+		display: block; //diplay on > 600px width
 	}
 }
 
@@ -91,10 +96,11 @@ header {
 	}
 	
 	#scroll-indicator {
-		display: none
+		display: none; //scroll indicator is hidden by defualt and displayed on >= 1200px width (see for-desktop-up section below)
 	}
 	
 	@include for-tablet-portrait-up {
+		//changes for >= 600px widths
 		padding: 0 10vw 10vw 10vw;
 		h1 {
 			font-size: 5vw;
@@ -105,6 +111,7 @@ header {
 	}
 	
 	@include for-tablet-landscape-up {
+		//changes for >= 900px widths
 		h1 {
 			font-size: 5.5rem;
 		}
@@ -114,39 +121,41 @@ header {
 	}
 	
 	@include for-desktop-up {
-		height: 100vh;
+		//changes for >= 1200px widths
+		display: flex; // turns header into a flex container to help display scroll indicator properly.
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh; // sets header full screen
+		overflow: hidden;
 		padding: 0 20vw 0 20vw;
 		
-		h1 {
-			margin-top: 25vh;
-		}
-		
 		#scroll-indicator {
-			@include flex(center, flex-end);
-			height: 34vh;
+			@include flex(center, flex-end); //displays scroll indicator and positions it bottom-center
 		}
 		img {
 			height: 12rem;
+			cursor: pointer; //cursor set to pointer to indicate clickable
 		}
 	}
 }
 
 figure {
-	@include flex(space-between, center);
+	@include flex(space-between, center); //creates flex container
 	width: 70%;
 	margin: 2rem auto;
 	
 	div {
-		@include flex(center, center);
+		@include flex(center, center); //used to center text within each div
 		font-size: 2rem;
 		font-weight: 600;
 		width: 8rem;
 		height: 8rem;
-		border: solid $orange .2rem;
-		border-radius: 5rem;
+		border: solid $orange .2rem; //uses same color stored in variable at top
+		border-radius: 5rem; //creates the circles
 	}
 	
 	@include for-tablet-portrait-up {
+		//changes for >= 600px width
 		width: 60%;
 		
 		div {
@@ -157,6 +166,7 @@ figure {
 	}
 	
 	@include for-tablet-landscape-up {
+		//changes for >= 900px width
 		width: 45%;
 		margin: 3rem auto;
 	}
@@ -167,10 +177,11 @@ figure {
 	margin: auto;
 	text-align: center;
 	padding: .1rem 1rem;
-	color: $darkgrey;
+	color: $darkgrey; //uses color stored in variable at top
 	background-color: lightgrey;
 	
 	@include for-tablet-portrait-up {
+		//changes for >= 600px width
 		width: 70%;
 	}
 }
@@ -189,10 +200,12 @@ figure {
 	}
 	
 	@include for-tablet-portrait-up {
+		//changes for >= 600px width
 		width: 70%;
 	}
 	
 	@include for-tablet-landscape-up {
+		//changes for >= 900px width
 		margin: 4rem auto;
 		
 		h3 {
@@ -201,6 +214,7 @@ figure {
 	}
 }
 
+//styles a fake post with with title, placeholder body, and vote counter
 #fake-post {
 	border: solid lightgrey .2rem;
 	padding: 1rem 0 .5rem 1rem;
@@ -259,11 +273,12 @@ figure {
 
 }
 
+//styles box with like and dislike images
 #vote-box {
-	@extend #fake-post;
+	@extend #fake-post; //brings in the styles from #fake-post as a starting point
 	height: 11.5rem;
 	padding: 1rem;
-	@include flex(space-around, center);
+	@include flex(space-around, center); //centers images in container
 	
 	div {
 		img {

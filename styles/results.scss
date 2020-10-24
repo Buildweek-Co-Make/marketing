@@ -1,6 +1,7 @@
-@import 'normalize';
-@import 'reset';
+@import 'normalize'; //adds 'normalize'
+@import 'reset'; //adds select resets
 
+// Set media query breakpoints for quick access
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
@@ -17,18 +18,21 @@
   @media (min-width: 1800px) { @content; }
 }
 
+// Quick access to flex properties
 @mixin flex($justify, $align) {
 	display: flex;
 	justify-content: $justify;
 	align-items: $align;
 }
 
+// Key colors for use below
 $orange: #e8833a;
 $darkgrey: #3e3e3e;
 
 html {
 	font-family: 'Roboto', sans-serif;
-	color: $darkgrey;
+	color: $darkgrey; // Set default font color to value stored above
+	scroll-behavior: smooth; //smooth scroll when clicking the scroll indicator
 }
 
 h1 {font-size: 3.1rem;}
@@ -50,7 +54,7 @@ button {
 	cursor: pointer;
 	
 	@include for-tablet-landscape-up {
-			font-size: 1.8rem;
+			font-size: 1.8rem; // Make button text bigger for larger screens
 		}
 }
 
@@ -77,10 +81,11 @@ header {
 	}
 	
 	#scroll-indicator {
-		display: none
+		display: none; //scroll indicator is hidden by defualt and displayed on >= 1200px width (see for-desktop-up section below)
 	}
 	
 	@include for-tablet-portrait-up {
+		//changes for >= 600px widths
 		padding: 0 10vw 10vw 10vw;
 		h1 {
 			font-size: 5vw;
@@ -91,6 +96,7 @@ header {
 	}
 	
 	@include for-tablet-landscape-up {
+		//changes for >= 900px widths
 		h1 {
 			font-size: 5.5rem;
 		}
@@ -100,34 +106,39 @@ header {
 	}
 	
 	@include for-desktop-up {
-		height: 100vh;
+		//changes for >= 1200px widths
+		display: flex; // turns header into a flex container to help display scroll indicator properly.
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh; // sets header full screen
+		overflow: hidden;
 		padding: 0 20vw 0 20vw;
 		
-		h1 {
-			margin-top: 25vh;
+		#scroll-indicator {
+			@include flex(center, flex-end); //displays scroll indicator and positions it bottom-center
 		}
 		
-		#scroll-indicator {
-			@include flex(center, flex-end);
-			height: 37vh;
-		}
 		img {
 			height: 12rem;
+			cursor: pointer; //cursor set to pointer to indicate clickable
 		}
 	}
 }
 
 main {
-	@include flex(center, center);
-	flex-flow: row wrap;
+	@include flex(center, center); //sets flex container for fake posts
+	flex-flow: row wrap; //turns on wrap for fake posts
 	margin: 2rem;
+	padding: 5rem 0;
 	
 	@include for-desktop-up {
-		width: 80%;
+		//changes for >= 1200px width
+		max-width: 143.9rem; //limits width so posts show 3 in a row at most
 		margin: auto;
 	}
 }
 
+//styles a fake post with with title, placeholder body, and vote counter
 .fake-post {
 	border: solid lightgrey .2rem;
 	padding: 1rem 0 .5rem 1rem;
