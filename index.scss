@@ -104,7 +104,57 @@ body{
         }
     }
 }
-
+@media only screen and (max-width: 600px) {
+    .navs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top:2%;
+       margin-left: auto;
+       margin-right: auto;
+        text-decoration: none;
+    }
+    #top-nav{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        justify-items: center;
+        a{
+            margin:1%;
+            padding:5px;
+            text-decoration: none;
+            font-size:12px;
+            color:black;
+            font-weight: bold;
+            background:#ff5203;
+            border-radius: 5px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+    #log-nav{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        justify-items: center;
+       
+        a{
+            margin:1%;
+            padding:5px;
+            text-decoration: none;
+            font-size:12px;
+            color:black;
+            font-weight: bold;
+            background:#ff5203;
+            border-radius: 5px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+}
+  
 .intro{
     display: flex;
     flex-direction: row;
